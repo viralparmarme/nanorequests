@@ -8,9 +8,9 @@ setup(
     author="Viral Parmar",
     description='The simplest REST requests package for quick API integration',
     author_email='viralparmarme@gmail.com',
-    packages=find_packages(),
     url='https://github.com/viralparmarme/nanorequests',
     keywords='nanorequests viralparmarme viralparmar',
+    py_modules=['nanorequests'],
     install_requires=[
         'requests'
     ],

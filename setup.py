@@ -1,5 +1,4 @@
-from setuptools import setup, find_packages
-
+from setuptools import setup
 
 setup(
     name='nanorequests',
@@ -12,8 +11,6 @@ setup(
     url='https://github.com/viralparmarme/nanorequests',
     keywords='nanorequests viralparmarme viralparmar',
     py_modules=['nanorequests', 'exceptions'],
-    long_description="README.md",
-    long_description_content_type="text/markdown",
     install_requires=[
         'requests'
     ],

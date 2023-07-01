@@ -1,7 +1,7 @@
 import unittest
 from unittest import mock
 
-from nanoexceptions import (
+from src.nanoexceptions import (
     RedirectionException,
     NotFoundException,
     ForbiddenException,
@@ -9,7 +9,7 @@ from nanoexceptions import (
     BadRequestException,
     InternalServerErrorException
 )
-from nanorequests import NanoRequests
+from src.nanorequests import NanoRequests
 
 
 def mock_requests_get(response_status_code, response_json=None, response_text=None):

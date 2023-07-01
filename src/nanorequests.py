@@ -1,6 +1,6 @@
 import requests
 
-from nanoexceptions import *
+from src.nanoexceptions import *
 
 
 class NanoRequests:

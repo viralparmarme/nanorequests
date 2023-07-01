@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='nanorequests',
-    version='0.4',
+    version='0.5',
     license='MIT',
     author="Viral Parmar",
     description='The simplest REST requests package for quick API integration',

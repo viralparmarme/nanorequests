@@ -1,5 +1,5 @@
 import requests
-from src.exceptions import *
+from exceptions import *
 
 
 class NanoRequests:

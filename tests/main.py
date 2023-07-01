@@ -1,7 +1,7 @@
 import unittest
 from unittest import mock
 
-from src.nanoexceptions import (
+from nanorequests.nanoexceptions import (
     RedirectionException,
     NotFoundException,
     ForbiddenException,
@@ -9,7 +9,7 @@ from src.nanoexceptions import (
     BadRequestException,
     InternalServerErrorException
 )
-from src.nanorequests import NanoRequests
+from nanorequests.nanorequests import NanoRequests
 
 
 def mock_requests_get(response_status_code, response_json=None, response_text=None):
@@ -30,7 +30,7 @@ def mock_requests_get(response_status_code, response_json=None, response_text=No
 class NanoRequestsTests(unittest.TestCase):
     @staticmethod
     def mock_get(response_status_code, response_json=None, response_text=None):
-        return mock.patch('nanorequests.requests.get',
+        return mock.patch('nanorequests.nanorequests.requests.get',
                           side_effect=lambda url, **kwargs: mock_requests_get(response_status_code, response_json,
                                                                               response_text))
 

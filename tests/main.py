@@ -1,7 +1,7 @@
 import unittest
 from unittest import mock
 
-from exceptions import (
+from nanoexceptions import (
     RedirectionException,
     NotFoundException,
     ForbiddenException,

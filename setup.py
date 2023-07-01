@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='src',
+    name='nanorequests',
     version='0.7',
     license='MIT',
     author="Viral Parmar",

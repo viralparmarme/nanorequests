@@ -34,25 +34,24 @@ from nanorequests import NanoRequests
 nr = NanoRequests()
 
 # Make a GET request
-response = nr.get('https://api.example.com/users')
+response = nr.get('https://dummyjson.com/products')
 
 # Make a POST request
-payload = {'name': 'John Doe', 'email': 'johndoe@example.com'}
-response = nr.post('https://api.example.com/users', json=payload)
+payload = {'title': 'Nano Requests Python'}
+response = nr.post('https://dummyjson.com/products/add', json=payload)
 ```
 
 The `NanoRequests` class also handles different types of HTTP status codes and raises specific exceptions for each status code. You can catch these exceptions and handle them accordingly.
 
 ```python
-from nanorequests import NanoRequests
-from nanorequests.nanoexceptions import NotFoundException
+from nanorequests import NanoRequests, NotFoundException
 
 nr = NanoRequests()
 
 try:
-    response = nr.get('https://api.example.com/users/123')
+    response = nr.get('https://dummyjson.com/products/99999')
 except NotFoundException as e:
-    print(f"User not found. Status code: {e.status_code}, Message: {e.message}")
+    print(f"Product not found. Status code: {e.status_code}, Message: {e.message}")
 ```
 
 ## Examples
@@ -60,38 +59,38 @@ except NotFoundException as e:
 ### GET Request
 
 ```python
-response = nr.get('https://api.example.com/users')
+response = nr.get('https://dummyjson.com/products/1')
 print(response)
 ```
 
 ### POST Request
 
 ```python
-payload = {'name': 'John Doe', 'email': 'johndoe@example.com'}
-response = nr.post('https://api.example.com/users', json=payload)
+payload = {'title': 'Viral Parmar'}
+response = nr.post('https://dummyjson.com/products/add', json=payload)
 print(response)
 ```
 
 ### PUT Request
 
 ```python
-payload = {'name': 'John Doe', 'email': 'johndoe@example.com'}
-response = nr.put('https://api.example.com/users/1', json=payload)
+payload = {'title': 'Python Requests PIP'}
+response = nr.put('https://dummyjson.com/products/1', json=payload)
 print(response)
 ```
 
 ### DELETE Request
 
 ```python
-response = nr.delete('https://api.example.com/users/1')
+response = nr.delete('https://dummyjson.com/products/1')
 print(response)
 ```
 
 ### PATCH Request
 
 ```python
-payload = {'name': 'John Doe'}
-response = nr.patch('https://api.example.com/users/1', json=payload)
+payload = {'title': 'Open Source Python'}
+response = nr.patch('https://dummyjson.com/products/1', json=payload)
 print(response)
 ```
 
@@ -104,14 +103,13 @@ The `nanorequests` package provides the following features:
 - Support for JSON responses which are automatically parsed in case of 2XX response.
 - Easy integration with the `requests` library.
 
-
 ### Handling Custom Exceptions
 
 ```python
 from nanorequests import NanoRequests, NotFoundException, UnauthorizedException
 
 try:
-    response = NanoRequests.get('https://api.example.com/users/1')
+    response = NanoRequests.get('https://dummyjson.com/products/1')
     print(response)
 except NotFoundException as e:
     print(f'Resource not found: {e}')
@@ -125,14 +123,13 @@ except Exception as e:
 
 For detailed information on each class and method, please refer to the source code and docstrings of the `nanorequests` package.
 
-
 ## Author
 
 The `nanorequests` package is developed and maintained by Viral Parmar.
- - https://twitter.com/viralparmarme  
- - https://github.com/viralparmarme
- - https://pypi.org/user/viralparmar
 
+- https://twitter.com/viralparmarme
+- https://github.com/viralparmarme
+- https://pypi.org/user/viralparmar
 
 ## License
 

@@ -53,44 +53,38 @@ class NanoRequestsTests(unittest.TestCase):
     def test_get_redirection(self):
         url = "https://api.example.com/users/3"
 
-        with self.mock_get(302):
-            with self.assertRaises(RedirectionException):
-                NanoRequests.get(url)
+        with self.mock_get(302), self.assertRaises(RedirectionException):
+            NanoRequests.get(url)
 
     def test_get_not_found(self):
         url = "https://api.example.com/users/4"
 
-        with self.mock_get(404):
-            with self.assertRaises(NotFoundException):
-                NanoRequests.get(url)
+        with self.mock_get(404), self.assertRaises(NotFoundException):
+            NanoRequests.get(url)
 
     def test_get_forbidden(self):
         url = "https://api.example.com/users/5"
 
-        with self.mock_get(403):
-            with self.assertRaises(ForbiddenException):
-                NanoRequests.get(url)
+        with self.mock_get(403), self.assertRaises(ForbiddenException):
+            NanoRequests.get(url)
 
     def test_get_too_many_requests(self):
         url = "https://api.example.com/users/6"
 
-        with self.mock_get(429):
-            with self.assertRaises(TooManyRequestsException):
-                NanoRequests.get(url)
+        with self.mock_get(429), self.assertRaises(TooManyRequestsException):
+            NanoRequests.get(url)
 
     def test_get_client_error(self):
         url = "https://api.example.com/users/7"
 
-        with self.mock_get(400):
-            with self.assertRaises(BadRequestException):
-                NanoRequests.get(url)
+        with self.mock_get(400), self.assertRaises(BadRequestException):
+            NanoRequests.get(url)
 
     def test_get_server_error(self):
         url = "https://api.example.com/users/8"
 
-        with self.mock_get(500):
-            with self.assertRaises(InternalServerErrorException):
-                NanoRequests.get(url)
+        with self.mock_get(500), self.assertRaises(InternalServerErrorException):
+            NanoRequests.get(url)
 
 
 if __name__ == '__main__':

@@ -153,7 +153,7 @@ dmypy.json
 cython_debug/
 
 # PyCharm files
-.idea/
+.idea/*
 
 # VSCode files
 .vscode

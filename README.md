@@ -1,4 +1,4 @@
-# nanorequests: Simplified REST Requests for Swift API Integration
+# nanorequests: Simplified REST Requests for Quick API Integration
 
 [![PyPI version](https://badge.fury.io/py/nanorequests.svg)](https://badge.fury.io/py/nanorequests)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
